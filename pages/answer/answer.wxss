@@ -1,0 +1,83 @@
+/* pages/index/index.wxss now*/
+page {
+  height: 100%;
+  background-color: #ffff;
+}
+
+.tjtop{
+  display:flex;
+  width: 100%;
+}
+.tjimg{
+  display:flex;
+  width: 100%; 
+  height: auto;    
+}
+
+/*纵向布局  */
+.layout_vertical{
+  display: flex;
+  height: 100%;
+  /*row 横向  column 列表  */
+  flex-direction: column;
+}
+
+.neirong{
+  top:3%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  height:20%;
+  width: 100%;
+}
+.jeisi{
+  display: flex;
+  position: relative;
+  height: 20%;
+  width:100%;
+}
+.gundong{
+  height: 2000px;
+  width:100%;
+}
+
+
+swiper{
+  display: flex;
+  position: relative;
+  height: 100%;
+  bottom: 0;
+  width: 100%;
+}
+swiper indicator{
+  align-items:flex-start;
+  display:flex;
+}
+
+.longimage{
+  display:flex;
+  width: 100%; 
+  height: auto;    
+}
+.bottomButtons{
+  display: flex;
+  position: fixed;
+  width:100%;
+  /*row 横向  column 列表  */
+  flex-direction: row;
+  align-items: center;
+  bottom:10px;
+}
+.yingyong {
+  width: 60%;
+  background-color: #333333;
+  color:white;
+}
+.save
+{
+  position: relative;
+  width:60rpx;
+  height: 60rpx; 
+  left:10%;
+}
+

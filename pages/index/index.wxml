@@ -1,0 +1,36 @@
+<!--pages/index/index.wxml-->
+<!-- tab -->
+
+ <view class = 'layout_vertical'>
+        <view class = 'tjtop'>
+          <image class = 'tjimg' src="../../images/guanli_1.png" mode='widthFix'> </image> 
+        </view>
+  <view class ='wenjuan'>
+<!-- 内容区  swiper -->
+<swiper duration='300' current="{{tab1Index}}" bindchange='swiperChange' data-index='{{tab1Index}}'>
+      <swiper-item wx:for="{{myData}}" wx:for-index='yeshu' wx:key="" data-index="{{yeshu}}" class='tupian'>
+        <view class='timu11'>
+        <scroll-view scroll-y="true" lower-threshold="50" bindscrolltolower="lower">
+        
+        <view class='title'><text class='xuhao'>{{yeshu+1}}.</text><text class='h2'>{{myData[yeshu].timu}}</text></view>
+        <view class='anniu' style="display:flex;flex-direction: row;">
+       <button  class="share" plain='true' bindtap='jiesi_tumu'></button>
+       </view>
+        <view class='neirong'>
+        <radio-group class="radio-group" name="daan_{{yeshu+1}}"  >
+          <label class="radio_li" wx:for="{{myData[yeshu].select}}" wx:key=""  wx:for-index="index" data-index="{{index}}" wx:for-item="danXuan" style="display:flex;flex-direction: row;" bindtap='xuanze'>
+            <text class='h1'>{{danXuan.value}}</text>
+            <radio  color="#1860F6"  value="{{danXuan.name}}" />
+          </label>
+        </radio-group>
+        </view>
+         
+    
+        </scroll-view>
+        </view>
+     <view class='yema'><text >{{yeshu+1}}/{{myData.length}}</text></view> 
+    </swiper-item>
+       
+</swiper>
+</view>
+</view>

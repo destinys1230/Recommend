@@ -1,0 +1,16 @@
+<view wx:if="{{articleList.length>0}}">
+  <view wx:for="{{articleList}}" wx:key="key" class="block" >
+  <view class="block-item">
+    <image src='{{item.img}}' bindtap = "searchdetails" id="{{item.articelId}}"class = "image-item" ></image>
+    <view class="content-text">
+        <text class="content-text" bindtap = "searchdetails" id="{{item.articelId}}">{{item.title}}</text>
+    </view>
+    <view class="detail-listtext">
+        <text  bindtap = "searchdetails" id="{{item.articelId}}"  >{{item.intro}}</text>
+    </view>
+    </view>
+  </view>
+</view>
+<view wx:if="{{articleList.length==0}}">
+<text>抱歉暂无精选文章</text>
+</view>

@@ -1,0 +1,50 @@
+.image{
+  position: relative;
+  display: flex;
+width:100%;
+   align-items: center;
+ justify-content: center;
+}
+
+.imagesize{
+ align-items:center;
+ 
+}
+.imagesize image { 
+  width:600rpx;
+  height: 600rpx;
+}
+
+.gif{
+ position: absolute;
+  width: 750rpx;
+  display: flex;
+z-index: 1;
+   align-items: center;
+ justify-content: center;
+}
+.sss1{
+  position: absolute;
+  top:14%;
+  left:5%;
+  z-index: 2;
+  color: #21A0F9;
+  font-size: 14px;
+}
+.sss2{
+  position: absolute;
+  top:10%;
+  left:50%;
+  z-index: 2;
+  color: #21A0F9;
+  font-size: 16px;
+}
+.sss3{
+  position: absolute;
+  bottom:10%;
+  left:40%;
+  z-index: 2;
+  color: #21A0F9
+;
+  font-size: 18px;
+}

@@ -1,0 +1,7 @@
+
+<view class='gif' style='height:{{ aheight }}px;' >
+  <image src='{{paths}}'   class='imagesize'  mode='aspectFit' ></image>
+  <text class='sss1'>正在计算匹配度</text>
+  <text class='sss2'>正在载入历史数据库</text>
+  <text class='sss3'>正在运行深度学习算法</text>
+</view>

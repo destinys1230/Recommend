@@ -1,0 +1,27 @@
+<view class="container">
+  <view class='progress_boxhjz'>
+ <text class='progress_info1'> 方案基本信息</text>
+ <view class="progress_text">
+
+  <view class="progress_xinxi">
+   <text class='progress_info2'> 方案负责人</text>
+  <text class='progress_info3'> {{progress1_txt}}</text>
+   </view>
+  <view class="progress_xinxi">
+   <text class='progress_info2'> 方案执行时间</text>
+  <text class='progress_info3'> {{progress2_txt}}</text>
+   </view>
+  <view class="progress_xinxi">
+   <text class='progress_info2'> 方案金额</text>
+  <text class='progress_info3'> {{progress3_txt}}</text>
+   </view>
+ <view class="progress_xinxi">
+   <text class='progress_info2'> 咨询电话</text>
+  <text class='progress_info3'> {{progress4_txt}}</text>
+   </view>
+
+ </view>
+   <button class='zhifu' bindtap='zhifu'>支付</button>
+  </view> 
+
+   </view> 

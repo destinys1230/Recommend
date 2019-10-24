@@ -1,0 +1,97 @@
+<view class="swiper-tab">
+  <block wx:for="{{swipertab}}" wx:key="sptab">
+    <view class="swiper-tab-list {{currtab == item.index ? 'on' : ''}}" data-current="{{item.index}}" bindtap="tabSwitch">{{item.name}}</view>
+  </block>
+</view>
+ 
+<swiper current="{{currtab}}" class="swiper-box" duration="300" style="height:{{deviceH-31}}px" bindchange="tabChange">
+  <!-- 完成 -->
+   <swiper-item wx:for="{{swipertab}}" wx:for-index='yeshu' wx:key="" data-index="{{yeshu}}">
+    <scroll-view class="hot-box" scroll-y="true">
+<block wx:if="{{boolean==true}}">
+<view class='header1'>
+  <view class='header'>
+    <view class='header_con flex_between'>
+      <view class='left'>
+        共计{{list[yeshu].length}}件订单
+      </view>
+      <view class='right flex_end'>
+        <view wx:if="{{!management_good}}" class='flex_center' bindtap='management'>
+          编辑
+        </view>
+        <view wx:if="{{management_good}}" class='flex_center' bindtap='finish_management'>
+          完成
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='onlinechoose'>
+ <view  class="orderDetails" wx:for="{{list[yeshu]}}" wx:key="{{index}}" wx:for-item="i" data-index="{{index}}" wx:key=" " bindtap='lishi_select'>
+        <view class='xuan'>
+          <view wx:if="{{management_good}}" class='lefts'>
+            <block wx-if="{{!i.checked}}">
+              <view class='icon_none'></view>
+            </block>
+            <block wx-if="{{i.checked}}">
+              <icon type="success" size="22" color="red" />
+            </block>
+           </view>
+        </view>
+        <view class="orderListTitle">
+          <text class="userName">{{i.name}}</text>
+        </view>
+        <view class="orderListDetails">
+          <view class="productInfo">
+            <text class="productPrice">方案内容：{{i.status}}</text>
+          </view>
+        </view>
+        <view class="productCount">
+          <view>
+            <text>合计：￥{{i.money}}</text>
+          </view>
+        </view>
+      </view>
+
+ </view>
+
+<view class='bottom flex_between' wx:if="{{management_good}}">
+  <view class='left flex_start'>
+    <block wx:if="{{select_all}}">
+      <view bindtap='select_none' class='flex_start'>
+        <icon type="success" size="22" color="red" />
+        <view>
+          取消全选
+        </view>
+      </view>
+    </block>
+    <block wx:if="{{!select_all}}">
+      <view bindtap='select_all' class='flex_start'>
+        <view class='select_none'>
+        </view>
+        <view>
+          全选
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class='right flex_end'>
+    <view style='text-align:right'>
+      <view class='all'>
+        共选中{{middlearr.length}}件订单
+      </view>
+    </view>
+    <view bindtap='deleteitem' class='sure'>
+      删除
+    </view>
+  </view>
+</view>
+</block>
+
+    </scroll-view>
+  </swiper-item>
+
+ 
+</swiper>
+

@@ -1,0 +1,15 @@
+<!--pages/article/article.wxml-->
+<view class= "article-container">
+  <view class="title-text">
+    <text>{{article.title}}</text>
+  </view>
+  <view wx:if="{{article.isvideo}}" class="article-video">
+    <video src="{{article.videoLink}}"  binderror="videoErrorCallback" custom-cache="{{false}}" objectFit="fill" controls="true" style='border-radius: 6rpx;'></video>
+  </view>
+  
+  
+</view>
+
+
+      
+  

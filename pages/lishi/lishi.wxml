@@ -1,0 +1,28 @@
+
+<view class="swiper-tab">
+  <block wx:for="{{swipertab}}" wx:key="sptab">
+    <view class="swiper-tab-list {{currtab == item.index ? 'on' : ''}}" data-current="{{item.index}}" bindtap="tabSwitch">{{item.name}}</view>
+  </block>
+</view>
+ 
+<swiper current="{{currtab}}" class="swiper-box" duration="300" style="height:{{deviceH-31}}px" bindchange="tabChange">
+  <!-- 完成 -->
+  <swiper-item wx:for="{{swipertab}}" wx:for-index='yeshu' wx:key="" data-index="{{yeshu}}">
+    <scroll-view class="hot-box" scroll-y="true">
+      <view  class="orderDetails" wx:for="{{shuju[yeshu]}}" wx:for-index='shuju_index' data-index="{{shuju_index}}" wx:key=" " bindtap='lishipage'>
+        <view class="orderListTitle">
+          <text class="userName">{{item.name}}</text>
+          <image  wx:if="{{item.star}}" class = 'shouchang'src="../../images/yishouchang.png"></image>
+        </view>
+        <view class="orderListDetails">
+          <view class="productInfo">
+            <text class="productPrice">方案内容：{{item.status}}</text>
+            
+          </view>
+        </view>
+
+      </view>
+    </scroll-view>
+  </swiper-item>
+ 
+</swiper>

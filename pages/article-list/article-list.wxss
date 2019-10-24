@@ -1,0 +1,87 @@
+ .page-title
+ {
+   text-align: center;
+    top: 20rpx;
+    box-sizing: border-box; 
+    padding: 20rpx;
+    background: white;
+ }
+.scroller-container{
+  height: 1300rpx;
+}
+.top-text{
+  font-size: 24rpx;
+  color: #999;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+
+.divLine{
+ background: #d2364c;
+ width: 100%;
+ height: 1px;
+}
+
+.image-container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  margin: 20rpx;
+}
+
+.image-item{
+  width: 100%;
+  height: 400rpx;
+}
+.view-like{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.icon-like{
+  width: 128rpx;
+  height: 128rpx;
+  margin-top: 20rpx;
+}
+.type-text{
+  margin-left: 10rpx;
+  font-size: 30rpx;
+}
+.url-text{
+  margin-left: 10rpx;
+  font-size: 24rpx;
+}
+.type-author{
+  margin-left: 10rpx;
+  font-size: 30rpx;
+}
+.content-text{
+  margin: 10rpx;
+  font-size: 18px;
+  font-weight: 600rpx;
+  color: #333;
+  text-align: center;
+}
+.detail-listtext{
+  font-size: 25rpx;
+  align-items: center;
+  color: rgb(97, 95, 95);
+  padding-bottom: 40rpx;
+}
+.block
+{
+  background-color:#eee;
+  padding-top:8rpx;
+  text-align: center;
+  padding-left: 12rpx;
+  padding-right: 12rpx;
+  padding-bottom:25rpx
+}
+
+.block-item{
+  background-color: white;
+  border-radius: 6rpx;
+}

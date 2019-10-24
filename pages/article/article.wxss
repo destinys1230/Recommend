@@ -1,0 +1,45 @@
+/* pages/article/article.wxss */
+.title-text{
+  padding-top:10px;
+  font-size: 28px;
+  font-weight: bold
+}
+.article-text
+{
+  padding:10px;
+  margin:10px;
+  overflow:hidden;
+  text-align: center;
+}
+.article-container{
+  background-color: white;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  padding-bottom: 10px
+}
+.card{
+  padding-top:25rpx;
+  background-color: rgb(247, 244, 244);
+  padding-left: 12rpx;
+  padding-right: 12rpx;
+  padding-bottom:25rpx;
+}
+.card-item{
+  border-radius: 12rpx;
+}
+.arrow{
+  font-size: 28px;
+  font-weight: bold;
+  color: rgb(140,98,56); 
+}
+.single-text{
+  margin-bottom:15px;
+  font-size: 18px;
+  white-space: pre-line;
+}
+.article-video{
+  padding-top:45rpx;
+  padding-bottom:30rpx;
+  padding-left:40rpx;
+  padding-right:40rpx;
+}

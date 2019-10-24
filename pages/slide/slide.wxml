@@ -1,0 +1,57 @@
+
+
+<view  wx:if="{{canIUse}}"class="bg" style='display:{{display}}'  ></view>
+<view wx:else>请升级微信版本</view>
+<view class="show"  style='display:{{display}}'>
+<button  class="denglu" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+</view>
+<view class="page">
+    <!-- 侧边栏内容 -->
+    <view class="page-slidebar">
+        <view class="page-content">
+            <view class="wc">
+                <button class="wcc" bindtap='jumpdingdan' >订单</button>
+            </view>
+            <view class="wc">
+                <button class="wcc" bindtap='jumpshouchang'>收藏历史</button>
+            </view>
+            <view class="wc">
+               <button class="wcc">关于我们</button>
+            </view>
+        </view>
+    </view>
+    
+    <!-- 主页内容 -->
+
+    <!-- （open ? 'c-state' : ''）三元运算符： -->
+    <!-- 1.默认情况下 open 为 false -->
+    <!-- 2.当点击左上角图标的时候或者屏幕向左滑动，open 变化 true -->
+    <!-- 3.当 open 为 true 时，会加上类名为 c-state 和 cover 的 css 样式 -->
+
+    <!-- bindtouchstart、 bindtouchmove、bindtouchend -->
+    <!-- 当手指触摸屏幕并滑动时，所触发的三个函数 -->
+    <view bindtouchmove="tap_drag" bindtouchend="tap_end" bindtouchstart="tap_start" class="page-top {{open ? ['c-state','cover'] : ''}} ">
+        <image class = 'page-top-img' bindtap="tap_ch" src="../../images/btn.png"></image>
+        <view class='content'> 
+          <view class = 'layout_vertical'>
+            <view class = 'tjtop'>
+             <image class = 'tjimg' src="../../images/tuijian.png" mode='widthFix'> </image> 
+            </view>
+            <view class = 'layout_horizontal1'>
+             <button class="control"  bindtap='jumpPage' data-type="guanli"> <image class = 'control_img ' src='../../images/guanli.png' mode='widthFix'></image></button>
+
+              <button class="control"  bindtap='jumpPage' data-type="shijue"> <image class = 'control_img ' src='../../images/shijue.png' mode='widthFix'></image></button>
+            </view>
+            <view class = 'layout_horizontal2'>
+              <button class="control"  bindtap='jumpPage' data-type="yingxiao"> <image class = 'control_img ' src='../../images/yingixiao.png' mode='widthFix'></image></button>
+               <button class="control"  bindtap='jumpPage'data-type="yinpin"> <image class = 'control_img ' src='../../images/yinpin.jpeg' mode='widthFix'></image></button>
+            </view>
+              <view class = 'shangcheng_top'> 
+              <button  class = 'shangcheng'  bindtap="shangcheng">商城</button>
+              <button  class = 'shangcheng' bindtap="wenzhang">文章</button>
+               </view>
+           </view>
+          
+          </view>
+        </view>
+</view>

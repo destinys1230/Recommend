@@ -1,0 +1,33 @@
+<!--pages/index/index.wxml-->
+<!-- tab -->
+
+ <view class = 'layout_vertical'>
+  
+    
+    <!-- 图片方案展示  swiper -->
+    <swiper duration='300'  current="{{tab1Index}}" data-index='{{tab1Index}}'   indicator-dots='true' indicator-color="white" indicator-active-color="#333333"> 
+      <swiper-item wx:for="{{myData}}" wx:for-index='yeshu' wx:key="" data-index="{{yeshu}}">
+        <scroll-view  scroll-y="true" class = 'gundong' >
+
+        <view class = 'tjtop'>
+          <image class = 'tjimg' src="../../images/guanli_1.png" mode='widthFix'> </image> 
+        </view>
+
+        <view class ='neirong'>
+          <text class = 'jeisi'>{{fangang_txt}}</text>
+        </view>
+
+        <image bindload="onImageLoad" style="width:{{imageHistoryRect.width}}; height:{{ imageHistoryRect.height }}rpx;" src="{{myData[yeshu]}}" mode='widthFix' >
+        </image>
+        </scroll-view>
+      </swiper-item>
+          
+    </swiper>
+    
+    <view class ='bottomButtons'>
+      <image class="save " src="{{isClick?'../../images/yishouchang.png':'../../images/weishouchang.png'}}" bindtap="haveSave"></image>
+      <button class='yingyong' bindtap="purchase">应用此方案</button>
+    </view>
+  
+
+</view>

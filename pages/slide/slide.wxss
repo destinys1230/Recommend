@@ -1,0 +1,192 @@
+
+.bg {
+  display: none;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 1001;
+  -moz-opacity: 0.7;
+  opacity: 0.70;
+  filter: alpha(opacity=70);
+}
+ 
+.show {
+  display: none;
+
+  text-align: center;
+  position: absolute;
+  top: 45%;
+  left: 20%;
+  width: 53%;
+  height: 10%;
+  padding: 8px;
+  border: 8px solid #e8e9f7;
+  background-color: white;
+  z-index: 1002;
+  overflow: auto;
+}
+.denglu{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+
+}
+
+
+
+
+/* 全局样式 */
+page, .page {
+    height: 100%;
+    font-family: 'PingFang SC',
+                 'Helvetica Neue',
+                 Helvetica,
+                 'Droid Sans Fallback',
+                 'Microsoft Yachei',
+                 sans-serif;
+}
+
+/* 侧边栏样式 */
+.page-slidebar {
+    height: 100%;
+    width: 750rpx;
+    position: fixed;
+    background-color:#7D7D7D;
+    z-index: 0;
+}
+/* 控制侧边栏的内容距离顶部的距离 */
+.page-content {
+    padding-top: 45%;
+}
+
+/* 侧边栏内容的 css 样式 */
+
+.wc {
+    padding: 0rpx 0 10rpx 0rpx;
+  width: 60%;
+
+}
+.wcc {
+  background-color: #E5E5E5;
+  padding: 10rpx 0 20rpx 10rpx;
+  color: black;
+  text-align:left;
+  font-weight:bold;
+  font-size:18px;
+  border-radius: 0px
+}
+
+/* 当屏幕向左滑动，出现侧边栏的时候，主页的动画样式 */
+/* scale：取值范围 0~1 ，表示屏幕大小是原来的百分之几，可以自己修改成 0.8 试下*/
+/* translate(60%,0%) 表示向左滑动的时候，侧边栏占用平时的宽度为 60%   */
+.c-state {
+    transform: rotate(0deg) scale(1) translate(60%, 0%);
+    -webkit-transform: rotate(0deg) scale(1) translate(60%, 0%);
+}
+
+/* 主页样式 */
+.page-top {
+    height: 100%;
+    position: fixed;
+    width: 750rpx;
+    background-color:white;
+    z-index: 0;
+    transition: All 0.4s ease;
+    -webkit-transition: All 0.4s ease;
+}
+/* 左上角图标的样式 */
+.page-top-img {
+    position: absolute;
+    width: 68rpx;
+    height: 68rpx;
+    left: 20rpx;
+    top: 20rpx;
+}
+/* 遮盖层样式 */
+.cover{
+    width: 100%;
+    height: 100%;
+    background-color:white;
+    opacity: 0.5;
+    z-index: 9000;
+}
+
+.content{
+   position: absolute;
+    top: 88rpx;
+    width: 100%;
+} 
+
+.tjtop{
+  display:flex;
+  width: 100%;
+}
+.tjimg{
+    width: 100%;
+    height: auto;
+    
+}
+
+
+.layout_horizontal1{
+  padding: 20rpx;
+  display: flex;
+  /*row 横向  column 列表  */
+  flex-direction: row;
+}
+.layout_horizontal2{
+  padding: 20rpx;
+  display: flex;
+  /*row 横向  column 列表  */
+  flex-direction: row;
+}
+
+/*纵向布局  */
+.layout_vertical{
+  display: flex;
+  /*row 横向  column 列表  */
+  flex-direction: column;
+  
+}
+
+.control {
+      position: relative;
+      width: 330rpx;
+      height: 330rpx;
+      padding:0rpx;
+       background-color: #fff;
+       border-radius:0;
+ 
+    }
+.control::after
+{
+  border:none;
+}
+ .control_img
+{
+   width: 100%;
+    height: auto;
+}
+
+.shangcheng_top{
+   position: relative;
+  padding: 20rpx;
+  display: flex;
+  flex-direction: row;
+}
+.shangcheng
+{
+  position: relative;
+  text-align:center;
+
+  width:40%;
+  color:white;
+  background-color: #2F3543;
+
+}
+   
+
